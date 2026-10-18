@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- DRAFT: remove this line when the site is approved for halxr.com -->
   <meta name="robots" content="noindex, nofollow">
-  <title>HAL by Halxr — Learning that adapts to the learner</title>
-  <meta name="description" content="HAL generates lesson plans and narrated lessons tailored to each learner's pace, background and vocabulary.">
+  <title>HAL by Halxr — An immersive classroom built for one</title>
+  <meta name="description" content="HAL is a VR learning platform that builds every lesson for one student, learns how they learn, and turns that learning into a signal employers and admissions can trust.">
   <meta property="og:title" content="HAL by Halxr">
-  <meta property="og:description" content="Every lesson, generated for the person taking it.">
+  <meta property="og:description" content="An immersive classroom built for one.">
   <meta name="theme-color" content="#050505">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,8 +25,8 @@
     <div class="container nav-inner">
       <a href="#" class="logo" aria-label="HAL home">HAL<span class="cursor" aria-hidden="true"></span></a>
       <nav aria-label="Main">
-        <a href="#how">How it works</a>
-        <a href="#roadmap">Roadmap</a>
+        <a href="#inside">Inside HAL</a>
+        <a href="#signal">The signal</a>
         <a href="#team">Team</a>
         <a href="#contact" class="btn btn-accent btn-small">Get in touch <span aria-hidden="true">↗</span></a>
       </nav>
@@ -34,48 +34,60 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero: immersive scene -->
     <section class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="label"><span class="pulse" aria-hidden="true"></span>Early access · Building now</p>
-          <h1>Lessons that learn <span class="dim">the learner.</span></h1>
-          <p class="lead">HAL turns any topic into a lesson plan and narrated lessons generated for one person: their pace, what they already know and how much jargon they want explained.</p>
-          <div class="actions">
-            <a href="#contact" class="btn btn-accent">Talk to us <span aria-hidden="true">↗</span></a>
-            <a href="#how" class="btn btn-outline">How it works</a>
-          </div>
+      <div class="container hero-copy">
+        <p class="label"><span class="pulse" aria-hidden="true"></span>VR learning platform · Early access</p>
+        <h1>Step into a classroom <span class="dim">built for one.</span></h1>
+        <p class="lead">HAL is an immersive learning world that builds every lesson for one student, learns how they learn, and adapts in real time.</p>
+        <div class="actions">
+          <a href="#contact" class="btn btn-accent">Talk to us <span aria-hidden="true">↗</span></a>
+          <a href="#inside" class="btn btn-outline">Look inside</a>
         </div>
+      </div>
 
-        <div class="console" aria-label="Example: the same topic generated for three different learners">
-          <div class="console-bar">
-            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="mono">hal://lesson-engine</span>
-            <span class="mono status">● live</span>
-          </div>
-          <div class="console-topic mono">topic: <strong>compound interest</strong></div>
-
-          <div class="tabs" role="tablist">
-            <button role="tab" aria-selected="true" data-tab="0">Maya<span>new to finance</span></button>
-            <button role="tab" aria-selected="false" data-tab="1">Sam<span>accountant</span></button>
-            <button role="tab" aria-selected="false" data-tab="2">Priya<span>15 minutes</span></button>
+      <div class="scene" aria-label="Illustration: lesson panels floating inside a virtual learning space">
+        <div class="horizon" aria-hidden="true"></div>
+        <div class="floor" aria-hidden="true"></div>
+        <div class="space" id="space">
+          <div class="float float-left" aria-hidden="true">
+            <p class="mono float-title">learner model</p>
+            <div class="meter"><span>pace</span><i style="--v: 35%"></i></div>
+            <div class="meter"><span>mastery</span><i style="--v: 62%"></i></div>
+            <div class="meter"><span>confidence</span><i style="--v: 48%"></i></div>
+            <p class="mono float-foot">updating ●</p>
           </div>
 
-          <div class="panel" data-panel="0">
-            <div class="chips"><span>pace: slow</span><span>prior: none</span><span>jargon: explain all</span></div>
-            <p class="out">“<em>Interest</em> is what a bank pays you for keeping your money there. <em>Compound</em> interest means next year you also earn interest on last year's interest. Let's see what that does to $100…”</p>
-            <div class="plan"><span>6 modules</span><span>45 min</span><span>12 terms defined</span></div>
+          <div class="console">
+            <div class="console-bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="mono">hal://lesson</span>
+              <span class="mono status">● immersive</span>
+            </div>
+            <div class="console-topic mono">topic: <strong>compound interest</strong></div>
+            <div class="tabs" role="tablist" aria-label="Example learners">
+              <button role="tab" aria-selected="true" data-tab="0">Maya<span>new to finance</span></button>
+              <button role="tab" aria-selected="false" data-tab="1">Sam<span>advanced</span></button>
+              <button role="tab" aria-selected="false" data-tab="2">Priya<span>15 minutes</span></button>
+            </div>
+            <div class="panel" data-panel="0">
+              <div class="chips"><span>pace: slow</span><span>prior: none</span><span>jargon: explain all</span></div>
+              <p class="out">“Watch the coins on your desk. Each year, the stack earns a little more, including on <em>last year's growth</em>. That's <em>compounding</em>…”</p>
+            </div>
+            <div class="panel" data-panel="1" hidden>
+              <div class="chips"><span>pace: fast</span><span>prior: expert</span><span>jargon: assume</span></div>
+              <p class="out">“Drag the rate slider in front of you. Compare effective annual rate against nominal APR as the compounding period shrinks toward <em>continuous</em>…”</p>
+            </div>
+            <div class="panel" data-panel="2" hidden>
+              <div class="chips"><span>time: 15 min</span><span>prior: some</span><span>goal: retirement</span></div>
+              <p class="out">“Two versions of you just appeared: one starts saving at 25, one at 35. Watch their balances grow side by side. <em>Time matters most.</em>”</p>
+            </div>
           </div>
-          <div class="panel" data-panel="1" hidden>
-            <div class="chips"><span>pace: fast</span><span>prior: expert</span><span>jargon: assume</span></div>
-            <p class="out">“With continuous compounding, A = Pe<sup>rt</sup>. We'll compare effective annual rate against nominal APR across compounding periods, then the edge cases that trip up models…”</p>
-            <div class="plan"><span>2 modules</span><span>20 min</span><span>edge cases first</span></div>
-          </div>
-          <div class="panel" data-panel="2" hidden>
-            <div class="chips"><span>time: 15 min</span><span>prior: some</span><span>goal: retirement</span></div>
-            <p class="out">“You have fifteen minutes, so here's the one idea that matters: start early. Money invested at 25 can be worth roughly double money invested at 35. Here's why…”</p>
-            <div class="plan"><span>1 module</span><span>15 min</span><span>3-question quiz</span></div>
+
+          <div class="float float-right" aria-hidden="true">
+            <p class="mono float-title">tutor</p>
+            <p class="bubble">Looks like that clicked. Want to try a harder one?</p>
+            <div class="reply mono"><span>yes</span><span>explain again</span></div>
           </div>
         </div>
       </div>
@@ -85,59 +97,94 @@
     <section class="strip" aria-label="What HAL adapts to">
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Reading level</span><span>Time available</span><span>Goals</span><span>Quiz results</span>
-          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Reading level</span><span>Time available</span><span>Goals</span><span>Quiz results</span>
+          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Attention</span><span>Confidence</span><span>Goals</span><span>Mastery</span>
+          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Attention</span><span>Confidence</span><span>Goals</span><span>Mastery</span>
         </div>
       </div>
-      <p class="sr-only">HAL adapts to pace, prior knowledge, vocabulary, reading level, time available, goals and quiz results.</p>
+      <p class="sr-only">HAL adapts to pace, prior knowledge, vocabulary, attention, confidence, goals and mastery.</p>
     </section>
 
     <!-- Problem -->
     <section class="section statement">
       <div class="container">
-        <h2>Courses are built for the average learner. <span class="dim">Nobody is the average learner.</span></h2>
+        <h2>One teacher. Thirty students. <span class="dim">Thirty different speeds.</span></h2>
         <div class="statement-grid">
-          <p>Beginners drown in jargon. Experts sit through basics they already know. People who need more time get rushed.</p>
-          <p>Great tutors adapt to every student, but they don't scale. HAL brings that adaptability to every lesson, for every learner.</p>
+          <p>Teach to the slowest student and you hold back the fastest. Teach to the middle and the rest fall behind. Learning is individual, but classrooms can't be.</p>
+          <p>Meanwhile teachers are scarce and stretched thin, and the old signals of what students can do (grades, essays, cover letters) mean less every year.</p>
         </div>
       </div>
     </section>
 
-    <!-- How it works -->
-    <section class="section" id="how">
+    <!-- Inside HAL: stereo headset view -->
+    <section class="section" id="inside">
       <div class="container">
-        <p class="label">How it works</p>
-        <h2 class="section-title">One profile in. <span class="dim">A lesson made for you out.</span></h2>
-        <div class="steps">
-          <article class="step">
-            <div class="step-head mono"><span>01</span>Profile</div>
-            <div class="viz viz-profile" aria-hidden="true">
-              <div class="slider"><span>Pace</span><i style="--v: 25%"></i></div>
-              <div class="slider"><span>Prior knowledge</span><i style="--v: 60%"></i></div>
-              <div class="slider"><span>Jargon</span><i style="--v: 85%"></i></div>
+        <p class="label">Inside HAL</p>
+        <h2 class="section-title">Put on the headset. <span class="dim">The lesson builds itself around you.</span></h2>
+
+        <div class="headset" aria-label="Illustration: a stereo VR view of a lesson about orbits">
+          <div class="eye">
+            <div class="world">
+              <div class="planet"></div>
+              <div class="orbit"><span class="moon"></span></div>
+              <div class="world-card mono"><b>orbit</b> a path one object takes around another, held by gravity</div>
+              <div class="world-hint mono">◎ grab the moon</div>
             </div>
-            <h3>Tell HAL who you are</h3>
-            <p>Your goal, what you already know, how fast you want to move and how much technical language you're comfortable with.</p>
-          </article>
-          <article class="step">
-            <div class="step-head mono"><span>02</span>Plan</div>
-            <div class="viz viz-plan" aria-hidden="true">
-              <div class="row"><b>01</b>Interest basics<em>8m</em></div>
-              <div class="row"><b>02</b>Why compounding wins<em>12m</em></div>
-              <div class="row active"><b>03</b>Your first projection<em>10m</em></div>
+          </div>
+          <div class="eye" aria-hidden="true">
+            <div class="world shift">
+              <div class="planet"></div>
+              <div class="orbit"><span class="moon"></span></div>
+              <div class="world-card mono"><b>orbit</b> a path one object takes around another, held by gravity</div>
+              <div class="world-hint mono">◎ grab the moon</div>
             </div>
-            <h3>Get a plan built for you</h3>
-            <p>A lesson plan sized to your time, with objectives and key terms pitched at your level.</p>
+          </div>
+          <span class="headset-label mono" aria-hidden="true">L</span>
+          <span class="headset-label mono right" aria-hidden="true">R</span>
+        </div>
+
+        <div class="features">
+          <article class="feature">
+            <div class="feature-head mono"><span>01</span>Immersive</div>
+            <h3>Learn by being there</h3>
+            <p>Stand inside the solar system, walk through a cell, hold a market in your hands. Abstract ideas become places you can explore.</p>
           </article>
-          <article class="step">
-            <div class="step-head mono"><span>03</span>Learn</div>
-            <div class="viz viz-learn" aria-hidden="true">
-              <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-              <div class="explain mono">⟲ explain that again</div>
+          <article class="feature">
+            <div class="feature-head mono"><span>02</span>Adaptive</div>
+            <h3>A tutor that never moves on too soon</h3>
+            <p>Every lesson is generated for one student. HAL slows down, speeds up, or explains it another way, the moment it's needed.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-head mono"><span>03</span>Continuous</div>
+            <h3>It learns the learner</h3>
+            <p>Every answer, hesitation and breakthrough sharpens HAL's model of how each student learns, so the next lesson fits even better.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- The signal -->
+    <section class="section" id="signal">
+      <div class="container signal-grid">
+        <div>
+          <p class="label">The signal</p>
+          <h2>A record of what you can do. <span class="dim">Not just what you say you can.</span></h2>
+          <p class="signal-copy">AI can write any cover letter, and a GPA means something different at every school. HAL sees how students actually learn: how they reason, how fast they master new material, how they handle hard problems.</p>
+          <p class="signal-copy">That becomes a capability profile that students own and can choose to share with employers, universities and programs that need a better signal.</p>
+        </div>
+
+        <div class="profile-card" aria-label="Illustrative example of a capability profile">
+          <div class="profile-head">
+            <div>
+              <p class="mono profile-kicker">capability profile</p>
+              <p class="profile-name">Student #4821</p>
             </div>
-            <h3>Learn, and it adapts</h3>
-            <p>Narrated lessons with a glossary and quiz. Every answer and every “explain that” reshapes what comes next.</p>
-          </article>
+            <span class="mono profile-badge">illustrative</span>
+          </div>
+          <div class="skill"><span>Quantitative reasoning</span><i style="--v: 86%"></i><b class="mono">advanced</b></div>
+          <div class="skill"><span>Learning velocity</span><i style="--v: 74%"></i><b class="mono">high</b></div>
+          <div class="skill"><span>Persistence on hard problems</span><i style="--v: 91%"></i><b class="mono">top 10%</b></div>
+          <div class="skill"><span>Written explanation</span><i style="--v: 58%"></i><b class="mono">developing</b></div>
+          <p class="mono profile-foot">based on observed learning sessions · shared by the student</p>
         </div>
       </div>
     </section>
@@ -146,12 +193,12 @@
     <section class="section" id="roadmap">
       <div class="container">
         <p class="label">Roadmap</p>
-        <h2 class="section-title">Shipping in the open. <span class="dim">Here's where we are.</span></h2>
+        <h2 class="section-title">Building in the open. <span class="dim">Here's where we are.</span></h2>
         <ol class="roadmap">
-          <li class="live"><span class="state mono">Live</span><h3>Adaptive lesson plans</h3><p>Learner profiles generate personalized plans.</p></li>
-          <li class="building"><span class="state mono">Building</span><h3>Narrated lessons</h3><p>Each module becomes narrated slides, a glossary and a quiz.</p></li>
-          <li><span class="state mono">Next</span><h3>Closed feedback loop</h3><p>Learner responses update the plan as they go.</p></li>
-          <li><span class="state mono">Next</span><h3>First pilots</h3><p>[Placeholder: target users or partners.]</p></li>
+          <li class="live"><span class="state mono">Prototype</span><h3>Adaptive lesson engine</h3><p>Learner profiles generate personalized lesson plans.</p></li>
+          <li class="building"><span class="state mono">Building</span><h3>Immersive VR lessons</h3><p>Lessons become explorable worlds with a built-in tutor.</p></li>
+          <li><span class="state mono">Next</span><h3>Capability profiles</h3><p>Learning data becomes a profile students own and share.</p></li>
+          <li><span class="state mono">Next</span><h3>First pilots</h3><p>[Placeholder: target schools, programs or partners.]</p></li>
         </ol>
       </div>
     </section>
@@ -184,9 +231,10 @@
 
     <!-- Contact -->
     <section class="cta" id="contact">
+      <div class="floor floor-cta" aria-hidden="true"></div>
       <div class="container">
         <p class="label">Contact</p>
-        <h2>The future of learning is personal. <span class="dim">Let's build it.</span></h2>
+        <h2>The next classroom isn't a room. <span class="dim">Help us build it.</span></h2>
         <p class="cta-sub">We're talking with accelerators, investors and early partners.</p>
         <!-- TODO: replace with a real address once email is set up for halxr.com -->
         <a href="mailto:hello@halxr.com" class="btn btn-accent btn-large">hello@halxr.com <span aria-hidden="true">↗</span></a>
@@ -202,8 +250,10 @@
   </footer>
 
   <script>
-    // Hero console: cycle through learners until someone clicks a tab.
     (function () {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Hero console: cycle through learners until someone clicks a tab.
       var tabs = document.querySelectorAll('[data-tab]');
       var panels = document.querySelectorAll('[data-panel]');
       var current = 0, timer;
@@ -215,8 +265,17 @@
       tabs.forEach(function (t, n) {
         t.addEventListener('click', function () { clearInterval(timer); show(n); });
       });
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        timer = setInterval(function () { show((current + 1) % tabs.length); }, 5000);
+      if (!reduced) timer = setInterval(function () { show((current + 1) % tabs.length); }, 5000);
+
+      // Hero scene: tilt the floating panels toward the pointer, like looking around in a headset.
+      var space = document.getElementById('space');
+      if (!reduced && window.matchMedia('(pointer: fine)').matches) {
+        window.addEventListener('pointermove', function (e) {
+          var x = e.clientX / window.innerWidth - 0.5;
+          var y = e.clientY / window.innerHeight - 0.5;
+          space.style.setProperty('--ry', (x * 10).toFixed(2) + 'deg');
+          space.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg');
+        });
       }
     })();
   </script>
