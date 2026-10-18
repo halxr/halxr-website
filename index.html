@@ -5,150 +5,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- DRAFT: remove this line when the site is approved for halxr.com -->
   <meta name="robots" content="noindex, nofollow">
-  <title>Halxr — Learning, built around the learner</title>
-  <meta name="description" content="Halxr generates lesson plans and narrated lessons tailored to each learner's pace, background and vocabulary.">
-  <meta property="og:title" content="Halxr — Learning, built around the learner">
-  <meta property="og:description" content="Personalized lesson plans and narrated lessons, generated for each learner.">
+  <title>HAL by Halxr — Learning that adapts to the learner</title>
+  <meta name="description" content="HAL generates lesson plans and narrated lessons tailored to each learner's pace, background and vocabulary.">
+  <meta property="og:title" content="HAL by Halxr">
+  <meta property="og:description" content="Every lesson, generated for the person taking it.">
+  <meta name="theme-color" content="#050505">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="draft-banner">Draft for internal review: placeholder content</div>
+  <div class="topbar">
+    <span class="tag">Draft</span> Placeholder content. Not for distribution.
+  </div>
 
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo" aria-label="Halxr home">
-        <img src="favicon.svg" alt="" width="28" height="28">
-        <span>Halxr</span>
-      </a>
+      <a href="#" class="logo" aria-label="HAL home">HAL<span class="cursor" aria-hidden="true"></span></a>
       <nav aria-label="Main">
         <a href="#how">How it works</a>
+        <a href="#roadmap">Roadmap</a>
         <a href="#team">Team</a>
-        <a href="#contact" class="btn btn-small">Get in touch</a>
+        <a href="#contact" class="btn btn-accent btn-small">Get in touch <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Personalized learning</p>
-          <h1>Every lesson, built for the person taking it.</h1>
-          <p class="lead">Halxr turns any topic into a lesson plan and narrated lessons shaped around each learner: their pace, what they already know and how much jargon they want explained.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn">Talk to us</a>
-            <a href="#how" class="btn btn-ghost">See how it works</a>
+        <div class="hero-copy">
+          <p class="label"><span class="pulse" aria-hidden="true"></span>Early access · Building now</p>
+          <h1>Lessons that learn <span class="dim">the learner.</span></h1>
+          <p class="lead">HAL turns any topic into a lesson plan and narrated lessons generated for one person: their pace, what they already know and how much jargon they want explained.</p>
+          <div class="actions">
+            <a href="#contact" class="btn btn-accent">Talk to us <span aria-hidden="true">↗</span></a>
+            <a href="#how" class="btn btn-outline">How it works</a>
           </div>
         </div>
 
-        <figure class="compare" aria-label="The same topic, adapted for two different learners">
-          <figcaption>Same topic: <strong>compound interest</strong></figcaption>
-          <div class="learner">
-            <div class="learner-head"><span class="dot dot-a"></span>Maya · new to finance · taking it slow</div>
-            <p>“<em>Interest</em> is what a bank pays you for keeping your money there. <em>Compound</em> interest means next year, you also earn interest on last year's interest…”</p>
-            <ul class="meta"><li>6 short modules</li><li>Every term defined</li><li>Extra worked examples</li></ul>
+        <div class="console" aria-label="Example: the same topic generated for three different learners">
+          <div class="console-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="mono">hal://lesson-engine</span>
+            <span class="mono status">● live</span>
           </div>
-          <div class="learner">
-            <div class="learner-head"><span class="dot dot-b"></span>Sam · accountant · moving fast</div>
-            <p>“With continuous compounding, A = Pe<sup>rt</sup>. Compare the effective annual rate against nominal APR across compounding periods…”</p>
-            <ul class="meta"><li>2 dense modules</li><li>Standard terminology</li><li>Edge cases first</li></ul>
+          <div class="console-topic mono">topic: <strong>compound interest</strong></div>
+
+          <div class="tabs" role="tablist">
+            <button role="tab" aria-selected="true" data-tab="0">Maya<span>new to finance</span></button>
+            <button role="tab" aria-selected="false" data-tab="1">Sam<span>accountant</span></button>
+            <button role="tab" aria-selected="false" data-tab="2">Priya<span>15 minutes</span></button>
           </div>
-        </figure>
+
+          <div class="panel" data-panel="0">
+            <div class="chips"><span>pace: slow</span><span>prior: none</span><span>jargon: explain all</span></div>
+            <p class="out">“<em>Interest</em> is what a bank pays you for keeping your money there. <em>Compound</em> interest means next year you also earn interest on last year's interest. Let's see what that does to $100…”</p>
+            <div class="plan"><span>6 modules</span><span>45 min</span><span>12 terms defined</span></div>
+          </div>
+          <div class="panel" data-panel="1" hidden>
+            <div class="chips"><span>pace: fast</span><span>prior: expert</span><span>jargon: assume</span></div>
+            <p class="out">“With continuous compounding, A = Pe<sup>rt</sup>. We'll compare effective annual rate against nominal APR across compounding periods, then the edge cases that trip up models…”</p>
+            <div class="plan"><span>2 modules</span><span>20 min</span><span>edge cases first</span></div>
+          </div>
+          <div class="panel" data-panel="2" hidden>
+            <div class="chips"><span>time: 15 min</span><span>prior: some</span><span>goal: retirement</span></div>
+            <p class="out">“You have fifteen minutes, so here's the one idea that matters: start early. Money invested at 25 can be worth roughly double money invested at 35. Here's why…”</p>
+            <div class="plan"><span>1 module</span><span>15 min</span><span>3-question quiz</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">The problem</p>
-          <h2>One-size-fits-all content leaves most learners behind.</h2>
-        </div>
-        <div class="prose">
-          <p>Courses and explainer videos are made once, for an imagined “average” learner. Beginners get lost in jargon. Experts sit through basics they already know. People who need more time get rushed.</p>
-          <p>Human tutors adapt to each learner, but they don't scale. Learners are left choosing between content that doesn't fit them and help they can't access.</p>
+    <!-- Adaptive dimensions strip -->
+    <section class="strip" aria-label="What HAL adapts to">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Reading level</span><span>Time available</span><span>Goals</span><span>Quiz results</span>
+          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Reading level</span><span>Time available</span><span>Goals</span><span>Quiz results</span>
         </div>
       </div>
+      <p class="sr-only">HAL adapts to pace, prior knowledge, vocabulary, reading level, time available, goals and quiz results.</p>
     </section>
 
-    <section class="section section-tint" id="how">
+    <!-- Problem -->
+    <section class="section statement">
       <div class="container">
-        <p class="eyebrow">How it works</p>
-        <h2>From a learner profile to a lesson made for them</h2>
-        <ol class="steps">
-          <li>
-            <span class="step-num">1</span>
-            <h3>Tell us about you</h3>
-            <p>Learners share their goal, what they already know, how fast they want to move and how much technical language they're comfortable with.</p>
-          </li>
-          <li>
-            <span class="step-num">2</span>
-            <h3>Get a personal plan</h3>
-            <p>Halxr builds a lesson plan sized to their available time, with objectives and key terms pitched at their level.</p>
-          </li>
-          <li>
-            <span class="step-num">3</span>
+        <h2>Courses are built for the average learner. <span class="dim">Nobody is the average learner.</span></h2>
+        <div class="statement-grid">
+          <p>Beginners drown in jargon. Experts sit through basics they already know. People who need more time get rushed.</p>
+          <p>Great tutors adapt to every student, but they don't scale. HAL brings that adaptability to every lesson, for every learner.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="container">
+        <p class="label">How it works</p>
+        <h2 class="section-title">One profile in. <span class="dim">A lesson made for you out.</span></h2>
+        <div class="steps">
+          <article class="step">
+            <div class="step-head mono"><span>01</span>Profile</div>
+            <div class="viz viz-profile" aria-hidden="true">
+              <div class="slider"><span>Pace</span><i style="--v: 25%"></i></div>
+              <div class="slider"><span>Prior knowledge</span><i style="--v: 60%"></i></div>
+              <div class="slider"><span>Jargon</span><i style="--v: 85%"></i></div>
+            </div>
+            <h3>Tell HAL who you are</h3>
+            <p>Your goal, what you already know, how fast you want to move and how much technical language you're comfortable with.</p>
+          </article>
+          <article class="step">
+            <div class="step-head mono"><span>02</span>Plan</div>
+            <div class="viz viz-plan" aria-hidden="true">
+              <div class="row"><b>01</b>Interest basics<em>8m</em></div>
+              <div class="row"><b>02</b>Why compounding wins<em>12m</em></div>
+              <div class="row active"><b>03</b>Your first projection<em>10m</em></div>
+            </div>
+            <h3>Get a plan built for you</h3>
+            <p>A lesson plan sized to your time, with objectives and key terms pitched at your level.</p>
+          </article>
+          <article class="step">
+            <div class="step-head mono"><span>03</span>Learn</div>
+            <div class="viz viz-learn" aria-hidden="true">
+              <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="explain mono">⟲ explain that again</div>
+            </div>
             <h3>Learn, and it adapts</h3>
-            <p>Each module becomes a narrated lesson with a glossary and quiz. Quiz results and “explain that” requests shape what comes next.</p>
-          </li>
+            <p>Narrated lessons with a glossary and quiz. Every answer and every “explain that” reshapes what comes next.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="section" id="roadmap">
+      <div class="container">
+        <p class="label">Roadmap</p>
+        <h2 class="section-title">Shipping in the open. <span class="dim">Here's where we are.</span></h2>
+        <ol class="roadmap">
+          <li class="live"><span class="state mono">Live</span><h3>Adaptive lesson plans</h3><p>Learner profiles generate personalized plans.</p></li>
+          <li class="building"><span class="state mono">Building</span><h3>Narrated lessons</h3><p>Each module becomes narrated slides, a glossary and a quiz.</p></li>
+          <li><span class="state mono">Next</span><h3>Closed feedback loop</h3><p>Learner responses update the plan as they go.</p></li>
+          <li><span class="state mono">Next</span><h3>First pilots</h3><p>[Placeholder: target users or partners.]</p></li>
         </ol>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">Where we are</p>
-          <h2>Building in the open, starting now.</h2>
-        </div>
-        <ul class="roadmap">
-          <li class="done"><strong>Working prototype</strong><span>Learner profiles generate personalized lesson plans.</span></li>
-          <li><strong>Narrated lessons</strong><span>Each module becomes slides with narration, a glossary and a quiz.</span></li>
-          <li><strong>Adaptive feedback</strong><span>Learner responses update the plan as they go.</span></li>
-          <li><strong>First pilots</strong><span>[Placeholder: target users or partners for the first pilot.]</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-tint" id="team">
+    <!-- Team -->
+    <section class="section" id="team">
       <div class="container">
-        <p class="eyebrow">Team</p>
-        <h2>Who we are</h2>
+        <p class="label">Team</p>
+        <h2 class="section-title">Built by <span class="dim">two founders.</span></h2>
         <div class="team">
           <article class="person">
-            <img class="avatar" src="images/joseph.jpg" alt="Joseph diTommaso" width="96" height="96">
-            <h3>Joseph diTommaso</h3>
-            <p class="role">Co-founder · [Title]</p>
-            <p>[Placeholder bio: background, what you bring to Halxr and why this problem matters to you.]</p>
+            <img class="photo" src="images/joseph.jpg" alt="Joseph diTommaso" width="400" height="400">
+            <div class="person-body">
+              <p class="mono role">Co-founder · [Title]</p>
+              <h3>Joseph diTommaso</h3>
+              <p>[Placeholder bio: background, what you bring to Halxr and why this problem matters to you.]</p>
+            </div>
           </article>
           <article class="person">
-            <div class="avatar" aria-hidden="true">PM</div>
-            <h3>Patrick Myers</h3>
-            <p class="role">Co-founder · [Title]</p>
-            <p>[Placeholder bio: background, what you bring to Halxr and why this problem matters to you.]</p>
+            <div class="photo photo-empty" aria-hidden="true">PM</div>
+            <div class="person-body">
+              <p class="mono role">Co-founder · [Title]</p>
+              <h3>Patrick Myers</h3>
+              <p>[Placeholder bio: background, what you bring to Halxr and why this problem matters to you.]</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section cta" id="contact">
-      <div class="container cta-inner">
-        <h2>Let's talk.</h2>
-        <p>We're looking for accelerator programs, investors and early partners who share our view that learning should fit the learner.</p>
+    <!-- Contact -->
+    <section class="cta" id="contact">
+      <div class="container">
+        <p class="label">Contact</p>
+        <h2>The future of learning is personal. <span class="dim">Let's build it.</span></h2>
+        <p class="cta-sub">We're talking with accelerators, investors and early partners.</p>
         <!-- TODO: replace with a real address once email is set up for halxr.com -->
-        <a href="mailto:hello@halxr.com" class="btn btn-light">hello@halxr.com</a>
+        <a href="mailto:hello@halxr.com" class="btn btn-accent btn-large">hello@halxr.com <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span>© 2026 Halxr</span>
-      <span>halxr.com</span>
+      <span class="logo logo-small">HAL<span class="cursor" aria-hidden="true"></span></span>
+      <span class="mono">© 2026 Halxr</span>
     </div>
   </footer>
+
+  <script>
+    // Hero console: cycle through learners until someone clicks a tab.
+    (function () {
+      var tabs = document.querySelectorAll('[data-tab]');
+      var panels = document.querySelectorAll('[data-panel]');
+      var current = 0, timer;
+      function show(i) {
+        current = i;
+        tabs.forEach(function (t, n) { t.setAttribute('aria-selected', n === i ? 'true' : 'false'); });
+        panels.forEach(function (p, n) { p.hidden = n !== i; });
+      }
+      tabs.forEach(function (t, n) {
+        t.addEventListener('click', function () { clearInterval(timer); show(n); });
+      });
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        timer = setInterval(function () { show((current + 1) % tabs.length); }, 5000);
+      }
+    })();
+  </script>
 </body>
 </html>
