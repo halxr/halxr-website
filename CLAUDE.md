@@ -13,14 +13,14 @@ Public marketing site for Halxr. Audience: accelerator programs and investors. O
 
 - Futuristic, techy, bold, intense. Never playful. It should feel like a cutting-edge AI startup site, not a pitch deck: no "market size" / "why now" / logo-wall sections.
 - References the founders liked: hud.ai, mastra.ai, martini.film, browser-use.com. VR references reviewed: prismsvr.com, transfrinc.com, strivr.com, gravitysketch.com.
-- VR cues are built in CSS (no footage yet): the hero's perspective floor grid and floating panels, and the stereo left/right-eye headset view in "Inside HAL". Replace with real in-headset footage when it exists.
+- VR cues are built in CSS (no footage yet): the hero's perspective floor grid and floating panels, and the explorable 360° view in "Inside HAL" (six lesson stations on a ring; drag/swipe/arrow keys to look around, HUD shows what you're facing plus a tutor line). Emphasize presence and moving around in the space; don't show split left/right-eye views (that's a recording artifact, not what users see). Replace with real in-headset footage when it exists.
 - Dark-only (no light theme). Near-black background, one accent color (`--accent` in `styles.css`; change it there to re-skin), Inter Tight for headlines, JetBrains Mono for labels.
 - Headline pattern: white statement + `<span class="dim">` gray continuation.
 - Logo is the text "HAL" with a blinking block cursor for now.
 
 ## Code
 
-- Static site: `index.html`, `styles.css`, `favicon.svg`, `images/`. No framework, no build step. The only JavaScript is the small inline script that cycles the hero console tabs and tilts the hero scene toward the pointer; keep JS minimal.
+- Static site: `index.html`, `styles.css`, `favicon.svg`, `images/`. No framework, no build step. The only JavaScript is the small inline script that cycles the hero console tabs, tilts the hero scene toward the pointer, and drives the 360° view; keep JS minimal.
 - Hosted on GitHub Pages from `main` (root). `.nojekyll` disables Jekyll processing.
 - Must work at phone width (16px side gutters, no horizontal scroll) and respect `prefers-reduced-motion`.
 
