@@ -8,6 +8,7 @@ Public marketing site for Halxr. Audience: accelerator programs and investors. O
 - Every lesson is generated for one student; the platform continuously learns how that student learns and adapts teaching in real time. It could replace or supplement the one-teacher-many-students model (teacher shortages, teaching to the middle leaves fast and slow students behind).
 - The deeper value is an **information system**: learning data becomes a capability profile (the "signal") that helps employers, admissions and programs tell candidates apart now that cover letters are AI-written and GPAs aren't comparable across schools. Frame it as student-owned and shared by choice.
 - Headsets aren't named; say "VR" / "immersive" / "headset".
+- HAL's in-lesson AI is the **agentic teacher** (founders' term, 2026-10-21). Don't call it a tutor or voice tutor. Research about "tutors" (e.g. the VanLehn stat) keeps its original wording.
 
 ## Tone and design
 
