@@ -15,8 +15,8 @@ Public marketing site for Halxr. Audience: accelerator programs and investors. O
 - Futuristic, techy, bold, intense. Never playful. It should feel like a cutting-edge AI startup site, not a pitch deck: no "market size" / "why now" / logo-wall sections.
 - References the founders liked: hud.ai, mastra.ai, martini.film, browser-use.com. VR references reviewed: prismsvr.com, transfrinc.com, strivr.com, gravitysketch.com.
 - VR cues are built in CSS (no footage yet): the hero's perspective floor grid and floating panels, and the explorable 360° view in "Inside HAL" (six lesson stations on a ring; drag/swipe/arrow keys to look around, HUD shows what you're facing plus a tutor line). Emphasize presence and moving around in the space; don't show split left/right-eye views (that's a recording artifact, not what users see). Replace with real in-headset footage when it exists.
-- Dark-only (no light theme). Near-black background, one accent color (`--accent` in `styles.css`; change it there to re-skin), Inter Tight for headlines, JetBrains Mono for labels.
-- Headline pattern: white statement + `<span class="dim">` gray continuation.
+- Light "lab white" theme (redesigned 2026-10-21 because the founders found the dark site too dark; the old dark design is git tag `dark-design-v1`). Warm off-white paper background, near-black ink text, white cards with soft shadows, one accent (`--accent` lime in `styles.css`). Lime is only a fill/highlight (buttons' arrows, chips, the marquee band, the contact panel), never text on the light background, for contrast. The 360° headset view stays dark on purpose (it's the in-headset window); it redefines the color tokens locally on `.viewport`. Fonts: Inter Tight headlines, Instrument Serif italic for the gray headline continuation, JetBrains Mono labels.
+- Headline pattern: ink statement + `<span class="dim">` continuation (rendered in serif italic, gray).
 - Logo is the text "HAL" with a blinking block cursor for now.
 
 ## Code
