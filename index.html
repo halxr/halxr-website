@@ -39,7 +39,7 @@
       <div class="container hero-copy">
         <p class="label"><span class="pulse" aria-hidden="true"></span>VR learning platform · Early access</p>
         <h1>Step into a classroom <span class="dim">built for one.</span></h1>
-        <p class="lead">HAL is an immersive learning world that builds every lesson for one student, learns how they learn, and adapts in real time.</p>
+        <p class="lead">HAL is an immersive learning world with a voice tutor. It builds every lesson for one student, learns how they learn, and adapts as they go.</p>
         <div class="actions">
           <a href="#contact" class="btn btn-accent">Talk to us <span aria-hidden="true">↗</span></a>
           <a href="#inside" class="btn btn-outline">Look inside</a>
@@ -85,7 +85,7 @@
           </div>
 
           <div class="float float-right" aria-hidden="true">
-            <p class="mono float-title">tutor</p>
+            <p class="mono float-title">tutor · voice</p>
             <p class="bubble">Looks like that clicked. Want to try a harder one?</p>
             <div class="reply mono"><span>yes</span><span>explain again</span></div>
           </div>
@@ -97,21 +97,41 @@
     <section class="strip" aria-label="What HAL adapts to">
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Attention</span><span>Confidence</span><span>Goals</span><span>Mastery</span>
-          <span>Pace</span><span>Prior knowledge</span><span>Vocabulary</span><span>Attention</span><span>Confidence</span><span>Goals</span><span>Mastery</span>
+          <span>Mastery</span><span>Retention</span><span>Pace</span><span>Prior knowledge</span><span>Engagement</span><span>Confidence</span><span>Goals</span>
+          <span>Mastery</span><span>Retention</span><span>Pace</span><span>Prior knowledge</span><span>Engagement</span><span>Confidence</span><span>Goals</span>
         </div>
       </div>
-      <p class="sr-only">HAL adapts to pace, prior knowledge, vocabulary, attention, confidence, goals and mastery.</p>
+      <p class="sr-only">HAL adapts to mastery, retention, pace, prior knowledge, engagement, confidence and goals.</p>
     </section>
 
     <!-- Problem -->
     <section class="section statement">
       <div class="container">
-        <h2>One teacher. Thirty students. <span class="dim">Thirty different speeds.</span></h2>
+        <h2>One class. One pace. <span class="dim">Every student somewhere else.</span></h2>
         <div class="statement-grid">
-          <p>Teach to the slowest student and you hold back the fastest. Teach to the middle and the rest fall behind. Learning is individual, but classrooms can't be.</p>
-          <p>Meanwhile teachers are scarce and stretched thin, and the old signals of what students can do (grades, essays, cover letters) mean less every year.</p>
+          <p>A teacher can teach at only one level and one pace. Students who start behind can't follow, and students who are ahead learn less than they could. Teaching to the middle costs learning at both ends.</p>
+          <p>Starting behind isn't the same as learning slowly. A capable student who begins in the wrong place keeps falling further behind, because every lesson builds on the one they missed.</p>
         </div>
+
+        <div class="stats">
+          <div class="stat">
+            <p class="stat-num">1 in 8</p>
+            <p class="stat-text">US teaching positions are vacant or held by a teacher not fully certified for them.</p>
+            <a class="stat-src mono" href="https://learningpolicyinstitute.org/product/overview-teacher-shortages-2025-factsheet" target="_blank" rel="noopener">Learning Policy Institute, 2025 ↗</a>
+          </div>
+          <div class="stat">
+            <p class="stat-num">$74,495 <span class="dim">vs $2,980</span></p>
+            <p class="stat-text">Teacher salary per student per year: one-to-one teaching vs a class of 25.</p>
+            <a class="stat-src mono" href="https://www.nea.org/resource-library/educator-pay-and-student-spending-how-does-your-state-rank" target="_blank" rel="noopener">NEA 2026 average salary · our calculation ↗</a>
+          </div>
+          <div class="stat">
+            <p class="stat-num">0.76 <span class="dim">vs 0.79</span></p>
+            <p class="stat-text">How much step-based software tutors and human tutors raise results (in standard deviations). Software can come close.</p>
+            <a class="stat-src mono" href="https://doi.org/10.1080/00461520.2011.611369" target="_blank" rel="noopener">VanLehn, Educational Psychologist, 2011 ↗</a>
+          </div>
+        </div>
+
+        <p class="statement-close">The gains of one-to-one teaching, <span class="dim">without one teacher per student.</span></p>
       </div>
     </section>
 
@@ -162,7 +182,7 @@
           <div class="hud" aria-hidden="true">
             <div class="hud-top mono"><span>facing</span><b id="hudFacing">orbits</b><span id="hudYaw">000°</span></div>
             <div class="reticle"></div>
-            <div class="hud-tutor"><p class="mono hud-label">tutor</p><p id="hudTutor">See how the moon never falls? It's falling around the planet. Want to try launching your own?</p></div>
+            <div class="hud-tutor"><p class="mono hud-label">tutor · speaking</p><p id="hudTutor">See how the moon never falls? It's falling around the planet. Want to try launching your own?</p></div>
             <div class="hud-hint mono" id="hudHint">⟵ drag to look around ⟶</div>
           </div>
         </div>
@@ -181,8 +201,26 @@
           <article class="feature">
             <div class="feature-head mono"><span>03</span>Continuous</div>
             <h3>It learns the learner</h3>
-            <p>Every answer, hesitation and breakthrough sharpens HAL's model of how each student learns, so the next lesson fits even better.</p>
+            <p>Every answer, hesitation and spoken explanation sharpens HAL's model of how each student learns, so the next lesson fits even better.</p>
           </article>
+        </div>
+
+        <div class="loops" aria-label="How HAL adapts: two loops, both for one student">
+          <div class="loop">
+            <p class="loop-head mono"><span>loop 01</span>Lesson · real time</p>
+            <ol class="loop-flow mono">
+              <li>material</li><li>student</li><li>evaluation</li><li>learner model</li><li class="loop-back">next material</li>
+            </ol>
+            <p class="loop-text">Every answer updates what HAL knows about the student, and the next step changes on the spot.</p>
+          </div>
+          <div class="loop">
+            <p class="loop-head mono"><span>loop 02</span>Course · periodic</p>
+            <ol class="loop-flow mono">
+              <li>learner model</li><li>new material</li><li>course optimization</li><li class="loop-back">this student's curriculum</li>
+            </ol>
+            <p class="loop-text">Over weeks, HAL rebuilds the path through the course around how this student actually learns.</p>
+          </div>
+          <p class="loops-caption mono">Both loops run for one student. No one else's curriculum changes.</p>
         </div>
       </div>
     </section>
@@ -193,7 +231,7 @@
         <div>
           <p class="label">The signal</p>
           <h2>A record of what you can do. <span class="dim">Not just what you say you can.</span></h2>
-          <p class="signal-copy">AI can write any cover letter, and a GPA means something different at every school. HAL sees how students actually learn: how they reason, how fast they master new material, how they handle hard problems.</p>
+          <p class="signal-copy">AI can write any cover letter, and a GPA means something different at every school. HAL sees how students actually learn: how fast they master new material, what they still remember a week later, how they handle hard problems and explain their thinking.</p>
           <p class="signal-copy">That becomes a capability profile that students own and can choose to share with employers, universities and programs that need a better signal.</p>
         </div>
 
@@ -205,10 +243,10 @@
             </div>
             <span class="mono profile-badge">illustrative</span>
           </div>
-          <div class="skill"><span>Quantitative reasoning</span><i style="--v: 86%"></i><b class="mono">advanced</b></div>
-          <div class="skill"><span>Learning velocity</span><i style="--v: 74%"></i><b class="mono">high</b></div>
+          <div class="skill"><span>Time to mastery</span><i style="--v: 78%"></i><b class="mono">fast</b></div>
+          <div class="skill"><span>Retention at 7 days</span><i style="--v: 86%"></i><b class="mono">high</b></div>
           <div class="skill"><span>Persistence on hard problems</span><i style="--v: 91%"></i><b class="mono">top 10%</b></div>
-          <div class="skill"><span>Written explanation</span><i style="--v: 58%"></i><b class="mono">developing</b></div>
+          <div class="skill"><span>Spoken explanation</span><i style="--v: 58%"></i><b class="mono">developing</b></div>
           <p class="mono profile-foot">based on observed learning sessions · shared by the student</p>
         </div>
       </div>
@@ -220,10 +258,10 @@
         <p class="label">Roadmap</p>
         <h2 class="section-title">Building in the open. <span class="dim">Here's where we are.</span></h2>
         <ol class="roadmap">
-          <li class="live"><span class="state mono">Prototype</span><h3>Adaptive lesson engine</h3><p>Learner profiles generate personalized lesson plans.</p></li>
-          <li class="building"><span class="state mono">Building</span><h3>Immersive VR lessons</h3><p>Lessons become explorable worlds with a built-in tutor.</p></li>
-          <li><span class="state mono">Next</span><h3>Capability profiles</h3><p>Learning data becomes a profile students own and share.</p></li>
-          <li><span class="state mono">Next</span><h3>First pilots</h3><p>[Placeholder: target schools, programs or partners.]</p></li>
+          <li class="building"><span class="state mono">Now</span><h3>Adaptive engine</h3><p>The learner model and lesson loop, tested on simulated learners against a fixed curriculum.</p></li>
+          <li><span class="state mono">Next</span><h3>VR prototype</h3><p>Lessons in the headset, with a voice tutor and the same adaptive engine behind them.</p></li>
+          <li><span class="state mono">Then</span><h3>Testers and pilot</h3><p>Early testers, then a pilot that measures what learners still know a week later.</p></li>
+          <li><span class="state mono">Later</span><h3>Capability profiles</h3><p>Learning data becomes a profile students own and share.</p></li>
         </ol>
       </div>
     </section>
@@ -239,7 +277,7 @@
             <div class="person-body">
               <p class="mono role">Co-founder · [Title]</p>
               <h3>Joseph diTommaso</h3>
-              <p>[Placeholder bio: background, what you bring to Halxr and why this problem matters to you.]</p>
+              <p>Background in information systems, business and marketing. Leads HAL's data architecture, the learning record behind the capability profile, and go-to-market.</p>
             </div>
           </article>
           <article class="person">
@@ -247,7 +285,7 @@
             <div class="person-body">
               <p class="mono role">Co-founder · [Title]</p>
               <h3>Patrick Myers</h3>
-              <p>[Placeholder bio: background, what you bring to Halxr and why this problem matters to you.]</p>
+              <p>Background in signal processing and optimal control. Leads HAL's learner model: estimating what each student knows and deciding what they should learn next.</p>
             </div>
           </article>
         </div>

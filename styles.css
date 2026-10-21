@@ -203,6 +203,15 @@ a { color: inherit; }
 @media (min-width: 760px) { .statement-grid { grid-template-columns: 1fr 1fr; gap: 48px; } }
 .statement-grid p { color: var(--muted); font-size: 1.08rem; border-top: 1px solid var(--line-strong); padding-top: 20px; }
 
+.stats { display: grid; gap: 1px; margin-top: 64px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+@media (min-width: 900px) { .stats { grid-template-columns: repeat(3, 1fr); } }
+.stat { background: var(--bg); padding: 28px; display: flex; flex-direction: column; min-width: 0; }
+.stat-num { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; margin: 0 0 14px; overflow-wrap: anywhere; }
+.stat-text { color: var(--muted); margin: 0 0 18px; flex: 1; }
+.stat-src { font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--dim); text-decoration: none; overflow-wrap: anywhere; }
+.stat-src:hover { color: var(--accent); }
+.statement-close { font-size: clamp(1.4rem, 2.8vw, 2.1rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; margin: 56px 0 0; max-width: 22em; }
+
 /* ---------- Inside HAL: explorable 360° view ---------- */
 .viewport {
   --r: 600px;
@@ -297,6 +306,20 @@ a { color: inherit; }
 .feature-head span { color: var(--accent); }
 .feature h3 { margin-bottom: 10px; }
 .feature p { color: var(--muted); margin: 0; }
+
+/* Two loops, both for one student */
+.loops { display: grid; gap: 16px; margin-top: 16px; }
+@media (min-width: 900px) { .loops { grid-template-columns: 1fr 1fr; } }
+.loop { border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; background: var(--surface); min-width: 0; }
+.loop-head { display: flex; gap: 12px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin: 0 0 22px; }
+.loop-head span { color: var(--accent); }
+.loop-flow { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; font-size: 0.78rem; }
+.loop-flow li { position: relative; border: 1px solid var(--line-strong); border-radius: 999px; padding: 6px 12px; color: var(--text); background: var(--bg); }
+.loop-flow li:not(:last-child)::after { content: "→"; position: absolute; right: -19px; top: 50%; transform: translateY(-50%); color: var(--dim); }
+.loop-flow li.loop-back { border-color: var(--accent); color: var(--accent); }
+.loop-flow li.loop-back::before { content: "↺ "; }
+.loop-text { color: var(--muted); margin: 0; }
+.loops-caption { grid-column: 1 / -1; margin: 4px 0 0; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim); }
 
 /* ---------- The signal ---------- */
 .signal-grid { display: grid; gap: 56px; align-items: center; }
