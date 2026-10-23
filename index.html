@@ -38,15 +38,23 @@
     <section class="hero">
       <div class="container hero-copy">
         <p class="label"><span class="pulse" aria-hidden="true"></span>VR learning platform · Early access</p>
-        <h1>Step into a classroom <span class="dim">built for one.</span></h1>
+        <h1>Step into a classroom <span class="dim">built for <span class="mark">one.</span></span></h1>
         <p class="lead">HAL is an immersive learning world with an agentic teacher. It builds every lesson for one student, learns how they learn, and adapts as they go.</p>
         <div class="actions">
           <a href="#contact" class="btn btn-accent">Talk to us <span aria-hidden="true">↗</span></a>
           <a href="#inside" class="btn btn-outline">Look inside</a>
         </div>
+        <ul class="hero-meta mono" aria-label="What HAL is">
+          <li>One student per lesson</li><li>Adapts in real time</li><li>Student-owned record</li>
+        </ul>
       </div>
 
       <div class="scene" aria-label="Illustration: lesson panels floating inside a virtual learning space">
+        <div class="viewfinder" aria-hidden="true">
+          <i class="vf tl"></i><i class="vf tr"></i><i class="vf bl"></i><i class="vf br"></i>
+          <span class="vf-read vf-left mono"><span class="vf-dot"></span>live · adapting</span>
+          <span class="vf-read vf-right mono">learner: <b id="vfLearner">maya</b></span>
+        </div>
         <div class="horizon" aria-hidden="true"></div>
         <div class="floor" aria-hidden="true"></div>
         <div class="space" id="space">
@@ -107,6 +115,7 @@
     <!-- Problem -->
     <section class="section statement">
       <div class="container">
+        <p class="label">The problem</p>
         <h2>One class. One pace. <span class="dim">Every student somewhere else.</span></h2>
         <div class="statement-grid">
           <p>A teacher can teach at only one level and one pace. Students who start behind can't follow, and students who are ahead learn less than they could. Teaching to the middle costs learning at both ends.</p>
@@ -308,6 +317,9 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span class="logo logo-small">HAL<span class="cursor" aria-hidden="true"></span></span>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#inside">Inside HAL</a><a href="#signal">The signal</a><a href="#roadmap">Roadmap</a><a href="#team">Team</a><a href="#contact">Contact</a>
+      </nav>
       <span class="mono">© 2026 Halxr</span>
     </div>
   </footer>
@@ -319,10 +331,12 @@
       // Hero console: cycle through learners until someone clicks a tab.
       var tabs = document.querySelectorAll('[data-tab]');
       var panels = document.querySelectorAll('[data-panel]');
+      var vfLearner = document.getElementById('vfLearner');
       var current = 0, timer;
       function show(i) {
         current = i;
         tabs.forEach(function (t, n) { t.setAttribute('aria-selected', n === i ? 'true' : 'false'); });
+        vfLearner.textContent = tabs[i].firstChild.textContent.trim().toLowerCase();
         panels.forEach(function (p, n) { p.hidden = n !== i; });
       }
       tabs.forEach(function (t, n) {
