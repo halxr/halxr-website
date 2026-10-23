@@ -88,7 +88,8 @@ a { color: inherit; }
 .stat span { color: var(--grey); font-size: 0.95rem; }
 .stat a { margin-top: auto; padding-top: 8px; text-decoration: underline; text-decoration-color: var(--hair); text-underline-offset: 3px; overflow-wrap: anywhere; }
 .stat a:hover { color: var(--ink); text-decoration-color: currentColor; }
-.stat .step { color: var(--ink); margin-bottom: 4px; }
+.stat .step { color: var(--ink); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+.note-line { margin: 24px 0 0; font-size: 1.05rem; color: var(--ink); }
 .versus { display: grid; gap: 16px; margin-top: 32px; }
 @media (min-width: 900px) { .versus { grid-template-columns: repeat(3, 1fr); } }
 .versus > div { background: var(--panel); border-radius: var(--radius); padding: 24px; min-width: 0; }
