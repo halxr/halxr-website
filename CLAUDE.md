@@ -23,10 +23,10 @@ Public marketing site for Halxr. Audience: accelerator programs and investors. O
 ## Code
 
 - Static site: `index.html`, `styles.css`, `favicon.svg`, `images/`. No framework, no build step. The only JavaScript is the small inline script that picks the visit's learner (color + fingerprint), draws the 30-student comparison, and drives the 360° view; keep JS minimal.
-- Hosted on GitHub Pages from `main` (root). `.nojekyll` disables Jekyll processing.
+- Hosted on GitHub Pages from `main` (root), served at https://www.halxr.com. `.nojekyll` disables Jekyll processing.
 - Must work at phone width (16px side gutters, no horizontal scroll) and respect `prefers-reduced-motion`.
 
 ## Content rules
 
 - Never publish claims we can't back up (traction numbers, partners, customer logos, results). Placeholders are marked with [brackets]; mock data (e.g. the capability profile) is labeled "illustrative".
-- Draft state: the `noindex` meta tag and the "Draft" top bar stay until both founders approve. Custom domain (halxr.com) is not connected yet.
+- Draft state: the `noindex` meta tag and the "Draft" top bar stay until both founders approve. Custom domain: www.halxr.com (connected 2026-10-23; the `CNAME` file in the repo root must stay, or the domain disconnects). The bare halxr.com needs four A records at Namecheap (185.199.108-111.153); GitHub then redirects it to www.
