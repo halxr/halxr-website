@@ -88,6 +88,16 @@ a { color: inherit; }
 .stat span { color: var(--grey); font-size: 0.95rem; }
 .stat a { margin-top: auto; padding-top: 8px; text-decoration: underline; text-decoration-color: var(--hair); text-underline-offset: 3px; overflow-wrap: anywhere; }
 .stat a:hover { color: var(--ink); text-decoration-color: currentColor; }
+.stat .step { color: var(--ink); margin-bottom: 4px; }
+.versus { display: grid; gap: 16px; margin-top: 32px; }
+@media (min-width: 900px) { .versus { grid-template-columns: repeat(3, 1fr); } }
+.versus > div { background: var(--panel); border-radius: var(--radius); padding: 24px; min-width: 0; }
+.versus h3 { margin: 4px 0 10px; font-size: 1.25rem; }
+.versus p:last-child { color: var(--grey); margin: 0; font-size: 0.95rem; }
+.versus .mono { margin: 0; }
+.versus .hal { background: var(--field); color: #fff; transition: background 0.6s; }
+.versus .hal .mono, .versus .hal p:last-child { color: rgba(255,255,255,0.9); }
+.note a { color: inherit; }
 .close { font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; margin: 56px 0 0; max-width: 26ch; }
 
 /* Inside HAL: light headset view, tinted with the learner color */

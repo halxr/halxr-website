@@ -26,6 +26,7 @@
       <a href="#" class="logo" aria-label="HAL home"><i aria-hidden="true"></i>HAL</a>
       <nav aria-label="Main">
         <a href="#problem">Problem</a>
+        <a href="#why">Why HAL</a>
         <a href="#inside">Inside HAL</a>
         <a href="#signal">The signal</a>
         <a href="#team">Team</a>
@@ -47,14 +48,14 @@
         </div>
       </div>
 
-      <div class="field" aria-label="Illustrative learner fingerprint. Each visit shows a different example learner.">
+      <div class="field" aria-label="Illustrative learner fingerprint: one dot per skill, brighter where the learner has mastered it. Each visit shows a different example learner.">
         <div class="field-head">
           <span class="mono">learner <b id="lid">0417</b> · illustrative</span>
           <button type="button" id="another" class="mono">Another learner</button>
         </div>
         <div class="print" id="print" aria-hidden="true"></div>
         <div class="field-foot">
-          <div><span class="mono">concepts mastered</span><b id="mastered">31 of 48</b></div>
+          <div><span class="mono">skills mastered</span><b id="mastered">31 of 48</b></div>
           <div><span class="mono">pace</span><b id="pace">steady</b></div>
           <div><span class="mono">learns best from</span><b id="best">diagrams</b></div>
         </div>
@@ -76,25 +77,55 @@
           <figure><div class="dots" id="dotsHal" aria-hidden="true"></div><figcaption class="mono">The same 30 with HAL · a lesson for each</figcaption></figure>
         </div>
 
-        <div class="stats">
+        <div class="stats chain3">
           <div class="stat">
-            <b>1 in 8</b>
-            <span>US teaching positions are vacant or held by a teacher not fully certified for them.</span>
-            <a class="mono" href="https://learningpolicyinstitute.org/product/overview-teacher-shortages-2025-factsheet" target="_blank" rel="noopener">Learning Policy Institute, 2025 ↗</a>
+            <span class="mono step">1 · The spread</span>
+            <b>5–6 grade levels</b>
+            <span>In a study of Delhi middle schools, students in the same grade spanned five to six grade levels of preparation. One lesson can't fit all of them.</span>
+            <a class="mono" href="https://doi.org/10.1257/aer.20171112" target="_blank" rel="noopener">Muralidharan, Singh &amp; Ganimian, American Economic Review, 2019 ↗</a>
           </div>
           <div class="stat">
-            <b>$74,495</b>
-            <span>Teacher salary per student per year for one-to-one teaching, vs $2,980 in a class of 25.</span>
-            <a class="mono" href="https://www.nea.org/resource-library/educator-pay-and-student-spending-how-does-your-state-rank" target="_blank" rel="noopener">NEA 2026 average salary · our calculation ↗</a>
+            <span class="mono step">2 · What works</span>
+            <b>Up to 2.5 years</b>
+            <span>Of extra math learned in one school year by students given daily two-on-one tutoring, in randomized trials in Chicago.</span>
+            <a class="mono" href="https://harris.uchicago.edu/news-events/news/students-return-school-new-research-finds-high-dosage-tutoring-can-reverse" target="_blank" rel="noopener">University of Chicago Education Lab ↗</a>
           </div>
           <div class="stat">
-            <b>0.76σ</b>
-            <span>Gain from step-based software tutors, close to human tutors at 0.79σ. Software can come close.</span>
-            <a class="mono" href="https://doi.org/10.1080/00461520.2011.611369" target="_blank" rel="noopener">VanLehn, Educational Psychologist, 2011 ↗</a>
+            <span class="mono step">3 · Why it doesn't scale</span>
+            <b>$3,500–4,300</b>
+            <span>Per student, per year, for that tutoring. A full-time teacher for every student would cost $74,495 each, and 1 in 8 US teaching positions is already vacant or not fully certified.</span>
+            <a class="mono" href="https://learningpolicyinstitute.org/product/overview-teacher-shortages-2025-factsheet" target="_blank" rel="noopener">UChicago Education Lab · NEA 2026 · Learning Policy Institute 2025 ↗</a>
           </div>
         </div>
 
-        <p class="close">The gains of one-to-one teaching, without one teacher per student.</p>
+        <p class="close">HAL's goal: the gains of individual instruction, without one teacher or tutor per student.</p>
+      </div>
+    </section>
+
+    <!-- Why HAL: positioning against the alternatives -->
+    <section class="section" id="why">
+      <div class="container">
+        <p class="kicker mono"><i aria-hidden="true"></i>Why HAL</p>
+        <h2>Most AI tutors adapt the conversation. HAL adapts the curriculum.</h2>
+        <p class="body">Software can do this job: in a review of tutoring studies, step-based computer tutors came close to human tutors, and in a randomized trial an adaptive system beat expert teacher-led instruction in math. What matters is what the software remembers and what it changes.</p>
+        <div class="versus">
+          <div>
+            <p class="mono">AI chat tutors</p>
+            <h3>Help in the moment</h3>
+            <p>Free from every major AI company. They explain well when asked, but they don't keep a model of the learner or change the course.</p>
+          </div>
+          <div>
+            <p class="mono">Adaptive practice software</p>
+            <h3>Adjusts the practice</h3>
+            <p>Tracks mastery skill by skill and picks the next exercise. The leading example runs as tablet practice in learning centers, starting with young children.</p>
+          </div>
+          <div class="hal">
+            <p class="mono">HAL</p>
+            <h3>Rebuilds the lesson</h3>
+            <p>Keeps a model of each learner across sessions, changes the lesson itself, and checks that it worked, inside an immersive VR lesson with an agentic teacher.</p>
+          </div>
+        </div>
+        <p class="note mono">Sources: <a href="https://doi.org/10.1080/00461520.2011.611369" target="_blank" rel="noopener">VanLehn, Educational Psychologist, 2011</a> · <a href="https://sri.com/publication/education-learning-pubs/when-adaptive-learning-is-effective-learning-comparison-of-an-adaptive-learning-system-to-teacher-led-instruction" target="_blank" rel="noopener">Wang et al., Interactive Learning Environments, 2020</a></p>
       </div>
     </section>
 
@@ -267,7 +298,7 @@
     <div class="container footer-inner">
       <span class="logo logo-small"><i aria-hidden="true"></i>HAL</span>
       <nav class="footer-links" aria-label="Footer">
-        <a href="#problem">Problem</a><a href="#inside">Inside HAL</a><a href="#signal">The signal</a><a href="#roadmap">Roadmap</a><a href="#team">Team</a>
+        <a href="#problem">Problem</a><a href="#why">Why HAL</a><a href="#inside">Inside HAL</a><a href="#signal">The signal</a><a href="#roadmap">Roadmap</a><a href="#team">Team</a>
       </nav>
       <span class="mono">© 2026 Halxr</span>
     </div>
