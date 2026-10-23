@@ -12,16 +12,17 @@ Public marketing site for Halxr. Audience: accelerator programs and investors. O
 
 ## Tone and design
 
-- Futuristic, techy, bold, intense. Never playful. It should feel like a cutting-edge AI startup site, not a pitch deck: no "market size" / "why now" / logo-wall sections.
-- References the founders liked: hud.ai, mastra.ai, martini.film, browser-use.com. VR references reviewed: prismsvr.com, transfrinc.com, strivr.com, gravitysketch.com.
-- VR cues are built in CSS (no footage yet): the hero's perspective floor grid and floating panels, and the explorable 360° view in "Inside HAL" (six lesson stations on a ring; drag/swipe/arrow keys to look around, HUD shows what you're facing plus a tutor line). Emphasize presence and moving around in the space; don't show split left/right-eye views (that's a recording artifact, not what users see). Replace with real in-headset footage when it exists.
-- Light "lab white" theme (redesigned 2026-10-21 because the founders found the dark site too dark; the old dark design is git tag `dark-design-v1`). Warm off-white paper background, near-black ink text, white cards with soft shadows, one accent (`--accent` lime in `styles.css`). Lime is only a fill/highlight (buttons' arrows, chips, the marquee band, the contact panel), never text on the light background, for contrast. The 360° headset view stays dark on purpose (it's the in-headset window); it redefines the color tokens locally on `.viewport`. Fonts: Inter Tight headlines, Instrument Serif italic for the gray headline continuation, JetBrains Mono labels.
-- Headline pattern: ink statement + `<span class="dim">` continuation (rendered in serif italic, gray).
-- Logo is the text "HAL" with a blinking block cursor for now.
+- Direction: **"Learner field"** (chosen 2026-10-22 after several rounds). Clean, futuristic, professional, warm and human. Not quirky, not busy, no gimmicks (no glow, floor grids, floating panels, textures, handwriting fonts).
+- Avoid AI-default looks: near-black + acid green, cream + serif + terracotta, teal + orange, purple gradients, Inter/Space Grotesk/Instrument Serif/Fraunces/DM Sans. Ground design choices in HAL's subject and explain them.
+- Color system: white page, ink text (#0e0f12), greys. The only color is the **learner color**: each visit picks a hue from a curated list and sets `--hue` on `:root`; `--field` (oklch L 0.52) is dark enough for white text at every hue, `--field-soft` / `--field-tint` are pale versions. Use the learner color sparingly (hero field, dots, the "now" roadmap card, chips, profile bars).
+- Hero: a "learner fingerprint" field (48 dots, brighter = mastered) for an example learner, labeled illustrative, with an "Another learner" button.
+- VR: "Inside HAL" is a light, calm explorable 360° lesson space (six stations; drag/swipe/arrow keys), tinted with the learner color, with an "agentic teacher" card. Labeled as an illustration until real in-headset footage exists. Headsets aren't named.
+- Type: Host Grotesk (headings and body), Martian Mono at 87.5% width (labels). Headlines are tight (negative tracking), no italics.
+- Earlier designs are tagged in git: `dark-design-v1`, `light-design-v2`.
 
 ## Code
 
-- Static site: `index.html`, `styles.css`, `favicon.svg`, `images/`. No framework, no build step. The only JavaScript is the small inline script that cycles the hero console tabs, tilts the hero scene toward the pointer, and drives the 360° view; keep JS minimal.
+- Static site: `index.html`, `styles.css`, `favicon.svg`, `images/`. No framework, no build step. The only JavaScript is the small inline script that picks the visit's learner (color + fingerprint), draws the 30-student comparison, and drives the 360° view; keep JS minimal.
 - Hosted on GitHub Pages from `main` (root). `.nojekyll` disables Jekyll processing.
 - Must work at phone width (16px side gutters, no horizontal scroll) and respect `prefers-reduced-motion`.
 

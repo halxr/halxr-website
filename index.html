@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- DRAFT: remove this line when the site is approved for halxr.com -->
   <meta name="robots" content="noindex, nofollow">
-  <title>HAL by Halxr — An immersive classroom built for one</title>
-  <meta name="description" content="HAL is a VR learning platform that builds every lesson for one student, learns how they learn, and turns that learning into a signal employers and admissions can trust.">
+  <title>HAL by Halxr — Every lesson, built for one student</title>
+  <meta name="description" content="HAL is a VR classroom with an agentic teacher. It builds every lesson for one student, learns how they learn, and turns that learning into a record the student owns.">
   <meta property="og:title" content="HAL by Halxr">
-  <meta property="og:description" content="An immersive classroom built for one.">
-  <meta name="theme-color" content="#f4f3ee">
+  <meta property="og:description" content="Every lesson, built for one student.">
+  <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;650;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300..800&family=Martian+Mono:wdth,wght@75..112.5,300..600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,240 +23,190 @@
 
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo" aria-label="HAL home">HAL<span class="cursor" aria-hidden="true"></span></a>
+      <a href="#" class="logo" aria-label="HAL home"><i aria-hidden="true"></i>HAL</a>
       <nav aria-label="Main">
+        <a href="#problem">Problem</a>
         <a href="#inside">Inside HAL</a>
         <a href="#signal">The signal</a>
         <a href="#team">Team</a>
-        <a href="#contact" class="btn btn-accent btn-small">Get in touch <span aria-hidden="true">↗</span></a>
+        <a href="#contact" class="btn btn-small">Get in touch</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero: immersive scene -->
-    <section class="hero">
-      <div class="container hero-copy">
-        <p class="label"><span class="pulse" aria-hidden="true"></span>VR learning platform · Early access</p>
-        <h1>Step into a classroom <span class="dim">built for <span class="mark">one.</span></span></h1>
-        <p class="lead">HAL is an immersive learning world with an agentic teacher. It builds every lesson for one student, learns how they learn, and adapts as they go.</p>
+    <!-- Hero: copy + this visit's learner field -->
+    <section class="container hero">
+      <div class="hero-copy">
+        <p class="kicker mono"><i aria-hidden="true"></i>VR learning platform · early access</p>
+        <h1>Every lesson, built for one student.</h1>
+        <p class="lead">HAL is a VR classroom with an agentic teacher. It learns how each student learns, and every lesson after that is shaped by it.</p>
         <div class="actions">
-          <a href="#contact" class="btn btn-accent">Talk to us <span aria-hidden="true">↗</span></a>
-          <a href="#inside" class="btn btn-outline">Look inside</a>
-        </div>
-        <ul class="hero-meta mono" aria-label="What HAL is">
-          <li>One student per lesson</li><li>Adapts in real time</li><li>Student-owned record</li>
-        </ul>
-      </div>
-
-      <div class="scene" aria-label="Illustration: lesson panels floating inside a virtual learning space">
-        <div class="viewfinder" aria-hidden="true">
-          <i class="vf tl"></i><i class="vf tr"></i><i class="vf bl"></i><i class="vf br"></i>
-          <span class="vf-read vf-left mono"><span class="vf-dot"></span>live · adapting</span>
-          <span class="vf-read vf-right mono">learner: <b id="vfLearner">maya</b></span>
-        </div>
-        <div class="horizon" aria-hidden="true"></div>
-        <div class="floor" aria-hidden="true"></div>
-        <div class="space" id="space">
-          <div class="float float-left" aria-hidden="true">
-            <p class="mono float-title">learner model</p>
-            <div class="meter"><span>pace</span><i style="--v: 35%"></i></div>
-            <div class="meter"><span>mastery</span><i style="--v: 62%"></i></div>
-            <div class="meter"><span>confidence</span><i style="--v: 48%"></i></div>
-            <p class="mono float-foot">updating ●</p>
-          </div>
-
-          <div class="console">
-            <div class="console-bar">
-              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="mono">hal://lesson</span>
-              <span class="mono status">● immersive</span>
-            </div>
-            <div class="console-topic mono">topic: <strong>compound interest</strong></div>
-            <div class="tabs" role="tablist" aria-label="Example learners">
-              <button role="tab" aria-selected="true" data-tab="0">Maya<span>new to finance</span></button>
-              <button role="tab" aria-selected="false" data-tab="1">Sam<span>advanced</span></button>
-              <button role="tab" aria-selected="false" data-tab="2">Priya<span>15 minutes</span></button>
-            </div>
-            <div class="panel" data-panel="0">
-              <div class="chips"><span>pace: slow</span><span>prior: none</span><span>jargon: explain all</span></div>
-              <p class="out">“Watch the coins on your desk. Each year, the stack earns a little more, including on <em>last year's growth</em>. That's <em>compounding</em>…”</p>
-            </div>
-            <div class="panel" data-panel="1" hidden>
-              <div class="chips"><span>pace: fast</span><span>prior: expert</span><span>jargon: assume</span></div>
-              <p class="out">“Drag the rate slider in front of you. Compare effective annual rate against nominal APR as the compounding period shrinks toward <em>continuous</em>…”</p>
-            </div>
-            <div class="panel" data-panel="2" hidden>
-              <div class="chips"><span>time: 15 min</span><span>prior: some</span><span>goal: retirement</span></div>
-              <p class="out">“Two versions of you just appeared: one starts saving at 25, one at 35. Watch their balances grow side by side. <em>Time matters most.</em>”</p>
-            </div>
-          </div>
-
-          <div class="float float-right" aria-hidden="true">
-            <p class="mono float-title">agentic teacher</p>
-            <p class="bubble">Looks like that clicked. Want to try a harder one?</p>
-            <div class="reply mono"><span>yes</span><span>explain again</span></div>
-          </div>
+          <a href="#contact" class="btn">Request the deck</a>
+          <a href="#inside" class="btn btn-ghost">Look inside</a>
         </div>
       </div>
-    </section>
 
-    <!-- Adaptive dimensions strip -->
-    <section class="strip" aria-label="What HAL adapts to">
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>Mastery</span><span>Retention</span><span>Pace</span><span>Prior knowledge</span><span>Engagement</span><span>Confidence</span><span>Goals</span>
-          <span>Mastery</span><span>Retention</span><span>Pace</span><span>Prior knowledge</span><span>Engagement</span><span>Confidence</span><span>Goals</span>
+      <div class="field" aria-label="Illustrative learner fingerprint. Each visit shows a different example learner.">
+        <div class="field-head">
+          <span class="mono">learner <b id="lid">0417</b> · illustrative</span>
+          <button type="button" id="another" class="mono">Another learner</button>
+        </div>
+        <div class="print" id="print" aria-hidden="true"></div>
+        <div class="field-foot">
+          <div><span class="mono">concepts mastered</span><b id="mastered">31 of 48</b></div>
+          <div><span class="mono">pace</span><b id="pace">steady</b></div>
+          <div><span class="mono">learns best from</span><b id="best">diagrams</b></div>
         </div>
       </div>
-      <p class="sr-only">HAL adapts to mastery, retention, pace, prior knowledge, engagement, confidence and goals.</p>
     </section>
 
     <!-- Problem -->
-    <section class="section statement">
+    <section class="section" id="problem">
       <div class="container">
-        <p class="label">The problem</p>
-        <h2>One class. One pace. <span class="dim">Every student somewhere else.</span></h2>
-        <div class="statement-grid">
+        <p class="kicker mono"><i aria-hidden="true"></i>The problem</p>
+        <h2>One class, one pace, every student somewhere else.</h2>
+        <div class="cols-2 body">
           <p>A teacher can teach at only one level and one pace. Students who start behind can't follow, and students who are ahead learn less than they could. Teaching to the middle costs learning at both ends.</p>
           <p>Starting behind isn't the same as learning slowly. A capable student who begins in the wrong place keeps falling further behind, because every lesson builds on the one they missed.</p>
         </div>
 
+        <div class="compare">
+          <figure><div class="dots" id="dotsClass" aria-hidden="true"></div><figcaption class="mono">A class of 30 · one lesson for everyone</figcaption></figure>
+          <figure><div class="dots" id="dotsHal" aria-hidden="true"></div><figcaption class="mono">The same 30 with HAL · a lesson for each</figcaption></figure>
+        </div>
+
         <div class="stats">
           <div class="stat">
-            <p class="stat-num">1 in 8</p>
-            <p class="stat-text">US teaching positions are vacant or held by a teacher not fully certified for them.</p>
-            <a class="stat-src mono" href="https://learningpolicyinstitute.org/product/overview-teacher-shortages-2025-factsheet" target="_blank" rel="noopener">Learning Policy Institute, 2025 ↗</a>
+            <b>1 in 8</b>
+            <span>US teaching positions are vacant or held by a teacher not fully certified for them.</span>
+            <a class="mono" href="https://learningpolicyinstitute.org/product/overview-teacher-shortages-2025-factsheet" target="_blank" rel="noopener">Learning Policy Institute, 2025 ↗</a>
           </div>
           <div class="stat">
-            <p class="stat-num">$74,495 <span class="dim">vs $2,980</span></p>
-            <p class="stat-text">Teacher salary per student per year: one-to-one teaching vs a class of 25.</p>
-            <a class="stat-src mono" href="https://www.nea.org/resource-library/educator-pay-and-student-spending-how-does-your-state-rank" target="_blank" rel="noopener">NEA 2026 average salary · our calculation ↗</a>
+            <b>$74,495</b>
+            <span>Teacher salary per student per year for one-to-one teaching, vs $2,980 in a class of 25.</span>
+            <a class="mono" href="https://www.nea.org/resource-library/educator-pay-and-student-spending-how-does-your-state-rank" target="_blank" rel="noopener">NEA 2026 average salary · our calculation ↗</a>
           </div>
           <div class="stat">
-            <p class="stat-num">0.76 <span class="dim">vs 0.79</span></p>
-            <p class="stat-text">How much step-based software tutors and human tutors raise results (in standard deviations). Software can come close.</p>
-            <a class="stat-src mono" href="https://doi.org/10.1080/00461520.2011.611369" target="_blank" rel="noopener">VanLehn, Educational Psychologist, 2011 ↗</a>
+            <b>0.76σ</b>
+            <span>Gain from step-based software tutors, close to human tutors at 0.79σ. Software can come close.</span>
+            <a class="mono" href="https://doi.org/10.1080/00461520.2011.611369" target="_blank" rel="noopener">VanLehn, Educational Psychologist, 2011 ↗</a>
           </div>
         </div>
 
-        <p class="statement-close">The gains of one-to-one teaching, <span class="dim">without one teacher per student.</span></p>
+        <p class="close">The gains of one-to-one teaching, without one teacher per student.</p>
       </div>
     </section>
 
-    <!-- Inside HAL: explorable 360° view -->
+    <!-- Inside HAL: clean explorable headset view -->
     <section class="section" id="inside">
       <div class="container">
-        <p class="label">Inside HAL</p>
-        <h2 class="section-title">Put on the headset. <span class="dim">The lesson is all around you.</span></h2>
+        <p class="kicker mono"><i aria-hidden="true"></i>Inside HAL</p>
+        <h2>Put on the headset. The lesson is all around you.</h2>
 
         <div class="viewport" id="viewport" tabindex="0" role="application" aria-roledescription="explorable scene"
              aria-label="Explorable lesson space. Drag, swipe or use the arrow keys to look around.">
           <div class="vp-horizon" aria-hidden="true"></div>
-          <div class="vp-floor" id="vpFloor" aria-hidden="true"></div>
-
           <div class="ring" id="ring">
             <div class="station" data-angle="0" data-name="orbits" data-tutor="See how the moon never falls? It's falling around the planet. Want to try launching your own?">
-              <p class="station-tag mono">station 01 · physics</p>
+              <p class="station-tag mono">physics</p>
               <div class="st-orbit"><div class="planet"></div><div class="orbit"><span class="moon"></span></div></div>
-              <p class="station-card"><b class="mono">orbit</b> A path one object takes around another, held by gravity.</p>
+              <p class="station-card"><b>Orbit</b> A path one object takes around another, held by gravity.</p>
             </div>
             <div class="station" data-angle="60" data-name="geometry" data-tutor="Grab the cube and turn it. Count the faces you can see, then the ones you can't.">
-              <p class="station-tag mono">station 02 · geometry</p>
+              <p class="station-tag mono">geometry</p>
               <div class="st-cube"><div class="cube"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-              <p class="station-card"><b class="mono">cube</b> Six square faces, twelve edges, eight vertices.</p>
+              <p class="station-card"><b>Cube</b> Six square faces, twelve edges, eight vertices.</p>
             </div>
             <div class="station" data-angle="120" data-name="compound interest" data-tutor="Each bar is a year. Notice the jumps get bigger? That's interest earning interest.">
-              <p class="station-tag mono">station 03 · finance</p>
+              <p class="station-tag mono">finance</p>
               <div class="st-bars"><i style="--h: 14%"></i><i style="--h: 18%"></i><i style="--h: 24%"></i><i style="--h: 31%"></i><i style="--h: 40%"></i><i style="--h: 52%"></i><i style="--h: 67%"></i><i style="--h: 86%"></i></div>
-              <p class="station-card"><b class="mono">compounding</b> Growth that earns growth on itself, year after year.</p>
+              <p class="station-card"><b>Compounding</b> Growth that earns growth on itself, year after year.</p>
             </div>
             <div class="station" data-angle="180" data-name="chemistry" data-tutor="Pull the two hydrogens apart. Feel how the bond resists? That's what holds water together.">
-              <p class="station-tag mono">station 04 · chemistry</p>
+              <p class="station-tag mono">chemistry</p>
               <div class="st-molecule"><span class="atom o">O</span><span class="atom h h1">H</span><span class="atom h h2">H</span><i class="bond b1"></i><i class="bond b2"></i></div>
-              <p class="station-card"><b class="mono">H₂O</b> One oxygen, two hydrogens, bent at about 104.5°.</p>
+              <p class="station-card"><b>H₂O</b> One oxygen, two hydrogens, bent at about 104.5°.</p>
             </div>
             <div class="station" data-angle="240" data-name="the cell" data-tutor="Walk closer to the nucleus. That's where the instructions for everything around you are stored.">
-              <p class="station-tag mono">station 05 · biology</p>
+              <p class="station-tag mono">biology</p>
               <div class="st-cell"><div class="nucleus"></div><i></i><i></i><i></i><i></i><i></i></div>
-              <p class="station-card"><b class="mono">nucleus</b> The control center of the cell, holding its DNA.</p>
+              <p class="station-card"><b>Nucleus</b> The control center of the cell, holding its DNA.</p>
             </div>
             <div class="station" data-angle="300" data-name="spanish" data-tutor="Point at the cat and say it out loud. I'll listen to your pronunciation.">
-              <p class="station-tag mono">station 06 · language</p>
+              <p class="station-tag mono">language</p>
               <div class="st-word"><span class="word">el gato</span><span class="mono phon">/el ˈɡa.to/</span></div>
-              <p class="station-card"><b class="mono">el gato</b> The cat. Masculine noun, so it takes “el”.</p>
+              <p class="station-card"><b>El gato</b> The cat. Masculine noun, so it takes “el”.</p>
             </div>
           </div>
 
           <div class="hud" aria-hidden="true">
             <div class="hud-top mono"><span>facing</span><b id="hudFacing">orbits</b><span id="hudYaw">000°</span></div>
-            <div class="reticle"></div>
-            <div class="hud-tutor"><p class="mono hud-label">agentic teacher</p><p id="hudTutor">See how the moon never falls? It's falling around the planet. Want to try launching your own?</p></div>
-            <div class="hud-hint mono" id="hudHint">⟵ drag to look around ⟶</div>
+            <div class="hud-teacher"><p class="mono hud-label">agentic teacher</p><p id="hudTutor">See how the moon never falls? It's falling around the planet. Want to try launching your own?</p></div>
+            <div class="hud-hint mono" id="hudHint">drag to look around</div>
           </div>
         </div>
+        <p class="note mono">Illustration of a lesson space. Real in-headset footage will replace it.</p>
 
         <div class="features">
-          <article class="feature">
-            <div class="feature-head mono"><span>01</span>Immersive</div>
+          <article>
+            <p class="mono">Immersive</p>
             <h3>Learn by being there</h3>
             <p>Stand inside the solar system, walk through a cell, hold a market in your hands. Abstract ideas become places you can explore.</p>
           </article>
-          <article class="feature">
-            <div class="feature-head mono"><span>02</span>Adaptive</div>
+          <article>
+            <p class="mono">Adaptive</p>
             <h3>A teacher that never moves on too soon</h3>
             <p>Every lesson is generated for one student. HAL slows down, speeds up, or explains it another way, the moment it's needed.</p>
           </article>
-          <article class="feature">
-            <div class="feature-head mono"><span>03</span>Continuous</div>
+          <article>
+            <p class="mono">Continuous</p>
             <h3>It learns the learner</h3>
             <p>Every answer, hesitation and spoken explanation sharpens HAL's model of how each student learns, so the next lesson fits even better.</p>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="loops" aria-label="How HAL adapts: two loops, both for one student">
+    <!-- How it works: two loops -->
+    <section class="section" id="how">
+      <div class="container">
+        <p class="kicker mono"><i aria-hidden="true"></i>How it works</p>
+        <h2>Two loops, both for one student.</h2>
+        <div class="loops">
           <div class="loop">
-            <p class="loop-head mono"><span>loop 01</span>Lesson · real time</p>
-            <ol class="loop-flow mono">
-              <li>material</li><li>student</li><li>evaluation</li><li>learner model</li><li class="loop-back">next material</li>
-            </ol>
-            <p class="loop-text">Every answer updates what HAL knows about the student, and the next step changes on the spot.</p>
+            <p class="mono">real time</p>
+            <h3>Lesson loop</h3>
+            <div class="chain"><span>Material</span><em>→</em><span>Student</span><em>→</em><span>Evaluation</span><em>→</em><span>Learner model</span><em>→</em><span class="last">Next material</span></div>
+            <p>Every answer updates what HAL knows about the student, and the next step changes on the spot.</p>
           </div>
           <div class="loop">
-            <p class="loop-head mono"><span>loop 02</span>Course · periodic</p>
-            <ol class="loop-flow mono">
-              <li>learner model</li><li>new material</li><li>course optimization</li><li class="loop-back">this student's curriculum</li>
-            </ol>
-            <p class="loop-text">Over weeks, HAL rebuilds the path through the course around how this student actually learns.</p>
+            <p class="mono">periodic</p>
+            <h3>Course loop</h3>
+            <div class="chain"><span>Learner model + new material</span><em>→</em><span>Course optimization</span><em>→</em><span class="last">This student's curriculum</span></div>
+            <p>Over weeks, HAL rebuilds the path through the course around how this student actually learns.</p>
           </div>
-          <p class="loops-caption mono">Both loops run for one student. No one else's curriculum changes.</p>
         </div>
+        <p class="note mono">No one else's curriculum changes.</p>
       </div>
     </section>
 
     <!-- The signal -->
     <section class="section" id="signal">
-      <div class="container signal-grid">
+      <div class="container two">
         <div>
-          <p class="label">The signal</p>
-          <h2>A record of what you can do. <span class="dim">Not just what you say you can.</span></h2>
-          <p class="signal-copy">AI can write any cover letter, and a GPA means something different at every school. HAL sees how students actually learn: how fast they master new material, what they still remember a week later, how they handle hard problems and explain their thinking.</p>
-          <p class="signal-copy">That becomes a capability profile that students own and can choose to share with employers, universities and programs that need a better signal.</p>
+          <p class="kicker mono"><i aria-hidden="true"></i>The signal</p>
+          <h2>A record of what you can do, owned by you.</h2>
+          <p class="body">AI can write any cover letter, and a GPA means something different at every school. HAL sees how students actually learn: how fast they master new material, what they still remember a week later, how they handle hard problems and explain their thinking.</p>
+          <p class="body">That becomes a capability profile that students own and can choose to share with employers, universities and programs that need a better signal.</p>
         </div>
-
-        <div class="profile-card" aria-label="Illustrative example of a capability profile">
-          <div class="profile-head">
-            <div>
-              <p class="mono profile-kicker">capability profile</p>
-              <p class="profile-name">Student #4821</p>
-            </div>
-            <span class="mono profile-badge">illustrative</span>
-          </div>
-          <div class="skill"><span>Time to mastery</span><i style="--v: 78%"></i><b class="mono">fast</b></div>
-          <div class="skill"><span>Retention at 7 days</span><i style="--v: 86%"></i><b class="mono">high</b></div>
-          <div class="skill"><span>Persistence on hard problems</span><i style="--v: 91%"></i><b class="mono">top 10%</b></div>
-          <div class="skill"><span>Spoken explanation</span><i style="--v: 58%"></i><b class="mono">developing</b></div>
-          <p class="mono profile-foot">based on observed learning sessions · shared by the student</p>
+        <div class="profile" aria-label="Illustrative example of a capability profile">
+          <div class="profile-head mono"><span>capability profile · learner <span class="lid2">0417</span></span><span>illustrative</span></div>
+          <div class="r"><span>Time to mastery</span><span class="mono">fast</span><i style="--v: 78%"></i></div>
+          <div class="r"><span>Retention at 7 days</span><span class="mono">high</span><i style="--v: 86%"></i></div>
+          <div class="r"><span>Persistence on hard problems</span><span class="mono">top 10%</span><i style="--v: 91%"></i></div>
+          <div class="r"><span>Spoken explanation</span><span class="mono">developing</span><i style="--v: 58%"></i></div>
+          <p class="mono foot">based on observed learning sessions · shared by the student</p>
         </div>
       </div>
     </section>
@@ -264,13 +214,13 @@
     <!-- Roadmap -->
     <section class="section" id="roadmap">
       <div class="container">
-        <p class="label">Roadmap</p>
-        <h2 class="section-title">Building in the open. <span class="dim">Here's where we are.</span></h2>
+        <p class="kicker mono"><i aria-hidden="true"></i>Roadmap</p>
+        <h2>Where we are.</h2>
         <ol class="roadmap">
-          <li class="building"><span class="state mono">Now</span><h3>Adaptive engine</h3><p>The learner model and lesson loop, tested on simulated learners against a fixed curriculum.</p></li>
-          <li><span class="state mono">Next</span><h3>VR prototype</h3><p>Lessons in the headset, with an agentic teacher and the same adaptive engine behind them.</p></li>
-          <li><span class="state mono">Then</span><h3>Testers and pilot</h3><p>Early testers, then a pilot that measures what learners still know a week later.</p></li>
-          <li><span class="state mono">Later</span><h3>Capability profiles</h3><p>Learning data becomes a profile students own and share.</p></li>
+          <li class="now"><span class="mono">Now</span><h3>Adaptive engine</h3><p>The learner model and lesson loop, tested on simulated learners against a fixed curriculum.</p></li>
+          <li><span class="mono">Next</span><h3>VR prototype</h3><p>Lessons in the headset, with an agentic teacher and the same adaptive engine behind them.</p></li>
+          <li><span class="mono">Then</span><h3>Testers and pilot</h3><p>Early testers, then a pilot that measures what learners still know a week later.</p></li>
+          <li><span class="mono">Later</span><h3>Capability profiles</h3><p>Learning data becomes a profile students own and share.</p></li>
         </ol>
       </div>
     </section>
@@ -278,21 +228,21 @@
     <!-- Team -->
     <section class="section" id="team">
       <div class="container">
-        <p class="label">Team</p>
-        <h2 class="section-title">Built by <span class="dim">two founders.</span></h2>
+        <p class="kicker mono"><i aria-hidden="true"></i>Team</p>
+        <h2>Two founders.</h2>
         <div class="team">
           <article class="person">
             <img class="photo" src="images/joseph.jpg" alt="Joseph diTommaso" width="400" height="400">
-            <div class="person-body">
-              <p class="mono role">Co-founder · [Title]</p>
+            <div>
+              <p class="mono">Co-founder · [Title]</p>
               <h3>Joseph diTommaso</h3>
               <p>Background in information systems, business and marketing. Leads HAL's data architecture, the learning record behind the capability profile, and go-to-market.</p>
             </div>
           </article>
           <article class="person">
             <div class="photo photo-empty" aria-hidden="true">PM</div>
-            <div class="person-body">
-              <p class="mono role">Co-founder · [Title]</p>
+            <div>
+              <p class="mono">Co-founder · [Title]</p>
               <h3>Patrick Myers</h3>
               <p>Background in signal processing and optimal control. Leads HAL's learner model: estimating what each student knows and deciding what they should learn next.</p>
             </div>
@@ -302,23 +252,22 @@
     </section>
 
     <!-- Contact -->
-    <section class="cta" id="contact">
-      <div class="floor floor-cta" aria-hidden="true"></div>
+    <section class="section contact" id="contact">
       <div class="container">
-        <p class="label">Contact</p>
-        <h2>The next classroom isn't a room. <span class="dim">Help us build it.</span></h2>
-        <p class="cta-sub">We're talking with accelerators, investors and early partners.</p>
+        <p class="kicker mono"><i aria-hidden="true"></i>Contact</p>
+        <h2>The classroom, rebuilt for one.</h2>
+        <p class="body">We're talking with accelerators, investors and early partners.</p>
         <!-- TODO: replace with a real address once email is set up for halxr.com -->
-        <a href="mailto:hello@halxr.com" class="btn btn-accent btn-large">hello@halxr.com <span aria-hidden="true">↗</span></a>
+        <a href="mailto:hello@halxr.com" class="btn btn-large">hello@halxr.com</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="logo logo-small">HAL<span class="cursor" aria-hidden="true"></span></span>
+      <span class="logo logo-small"><i aria-hidden="true"></i>HAL</span>
       <nav class="footer-links" aria-label="Footer">
-        <a href="#inside">Inside HAL</a><a href="#signal">The signal</a><a href="#roadmap">Roadmap</a><a href="#team">Team</a><a href="#contact">Contact</a>
+        <a href="#problem">Problem</a><a href="#inside">Inside HAL</a><a href="#signal">The signal</a><a href="#roadmap">Roadmap</a><a href="#team">Team</a>
       </nav>
       <span class="mono">© 2026 Halxr</span>
     </div>
@@ -327,39 +276,47 @@
   <script>
     (function () {
       var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var root = document.documentElement;
 
-      // Hero console: cycle through learners until someone clicks a tab.
-      var tabs = document.querySelectorAll('[data-tab]');
-      var panels = document.querySelectorAll('[data-panel]');
-      var vfLearner = document.getElementById('vfLearner');
-      var current = 0, timer;
-      function show(i) {
-        current = i;
-        tabs.forEach(function (t, n) { t.setAttribute('aria-selected', n === i ? 'true' : 'false'); });
-        vfLearner.textContent = tabs[i].firstChild.textContent.trim().toLowerCase();
-        panels.forEach(function (p, n) { p.hidden = n !== i; });
-      }
-      tabs.forEach(function (t, n) {
-        t.addEventListener('click', function () { clearInterval(timer); show(n); });
-      });
-      if (!reduced) timer = setInterval(function () { show((current + 1) % tabs.length); }, 5000);
-
-      // Hero scene: tilt the floating panels toward the pointer, like looking around in a headset.
-      var space = document.getElementById('space');
-      if (!reduced && window.matchMedia('(pointer: fine)').matches) {
-        window.addEventListener('pointermove', function (e) {
-          var x = e.clientX / window.innerWidth - 0.5;
-          var y = e.clientY / window.innerHeight - 0.5;
-          space.style.setProperty('--ry', (x * 10).toFixed(2) + 'deg');
-          space.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg');
+      // One example learner per visit. Hues come from a curated set so every
+      // field is dark enough for white text.
+      var hues = [250, 205, 165, 145, 60, 35, 15, 330, 290];
+      var paces = ['steady', 'fast', 'careful', 'quick starts', 'slow and deep'];
+      var bests = ['diagrams', 'worked examples', 'explaining aloud', 'hands-on models', 'hard problems first'];
+      function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+      var print = document.getElementById('print');
+      for (var i = 0; i < 48; i++) print.appendChild(document.createElement('i'));
+      function learner() {
+        root.style.setProperty('--hue', pick(hues));
+        var id = String(Math.floor(Math.random() * 9000) + 1000);
+        document.getElementById('lid').textContent = id;
+        document.querySelectorAll('.lid2').forEach(function (x) { x.textContent = id; });
+        var m = 0;
+        [].forEach.call(print.children, function (d) {
+          var r = Math.random(), o = r > 0.4 ? 0.95 : (r > 0.18 ? 0.45 : 0.16);
+          if (o > 0.9) m++;
+          d.style.setProperty('--o', o);
         });
+        document.getElementById('mastered').textContent = m + ' of 48';
+        document.getElementById('pace').textContent = pick(paces);
+        document.getElementById('best').textContent = pick(bests);
+      }
+      learner();
+      document.getElementById('another').addEventListener('click', learner);
+
+      // Problem: 30 identical students vs 30 individual ones.
+      var dc = document.getElementById('dotsClass'), dh = document.getElementById('dotsHal');
+      for (var j = 0; j < 30; j++) {
+        dc.appendChild(document.createElement('i'));
+        var d = document.createElement('i');
+        d.style.background = 'oklch(0.6 0.11 ' + hues[(j * 4) % hues.length] + ')';
+        dh.appendChild(d);
       }
 
       // Inside HAL: lesson stations arranged in a circle around the viewer.
       // Drag, swipe or use arrow keys to turn; it slowly turns on its own when idle.
       var vp = document.getElementById('viewport');
       var ring = document.getElementById('ring');
-      var floor = document.getElementById('vpFloor');
       var stations = [].slice.call(ring.querySelectorAll('.station'));
       var hudFacing = document.getElementById('hudFacing');
       var hudYaw = document.getElementById('hudYaw');
@@ -367,24 +324,21 @@
       var hudHint = document.getElementById('hudHint');
       var yaw = 0, radius = 600, dragging = false, lastX = 0, idleAt = 0, facing = null;
 
-      function wrap(a) { return ((a % 360) + 540) % 360 - 180; } // -180..180
-
+      function wrap(a) { return ((a % 360) + 540) % 360 - 180; }
       function layout() {
         radius = Math.max(260, Math.min(760, vp.clientWidth * 0.62));
         vp.style.setProperty('--r', radius + 'px');
       }
-
       function render() {
         ring.style.transform = 'translateZ(' + radius + 'px) rotateY(' + yaw + 'deg)';
-        floor.style.backgroundPositionX = (yaw * 6) + 'px';
         var best = null, bestDist = 999;
         stations.forEach(function (s) {
           var a = +s.dataset.angle;
           s.style.transform = 'rotateY(' + (-a) + 'deg) translateZ(' + (-radius) + 'px)';
-          var d = Math.abs(wrap(yaw - a));
-          s.style.opacity = d > 70 ? 0 : (1 - Math.max(0, d - 30) / 40).toFixed(2);
-          s.style.visibility = d > 70 ? 'hidden' : 'visible';
-          if (d < bestDist) { bestDist = d; best = s; }
+          var dd = Math.abs(wrap(yaw - a));
+          s.style.opacity = dd > 70 ? 0 : (1 - Math.max(0, dd - 30) / 40).toFixed(2);
+          s.style.visibility = dd > 70 ? 'hidden' : 'visible';
+          if (dd < bestDist) { bestDist = dd; best = s; }
         });
         hudYaw.textContent = ('00' + Math.round(((yaw % 360) + 360) % 360)).slice(-3) + '°';
         if (best !== facing) {
@@ -393,7 +347,6 @@
           hudTutor.textContent = best.dataset.tutor;
         }
       }
-
       function turn(dx) { yaw += dx; idleAt = Date.now(); hudHint.classList.add('used'); render(); }
 
       vp.addEventListener('pointerdown', function (e) { dragging = true; lastX = e.clientX; vp.setPointerCapture(e.pointerId); vp.classList.add('grabbing'); });
@@ -405,10 +358,8 @@
         if (e.key === 'ArrowLeft') { turn(-15); e.preventDefault(); }
         if (e.key === 'ArrowRight') { turn(15); e.preventDefault(); }
       });
-
       layout(); render();
       window.addEventListener('resize', function () { layout(); render(); });
-
       if (!reduced) {
         (function idle() {
           if (!dragging && Date.now() - idleAt > 3000) { yaw += 0.08; render(); }
